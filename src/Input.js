@@ -1,5 +1,4 @@
 import { Component } from "inferno";
-import { Link } from "inferno-router";
 
 class Input extends Component {
   changeInput = index => event => {
