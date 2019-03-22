@@ -1,4 +1,4 @@
-import { Component } from "inferno";
+import { Link } from "inferno-router";
 
 const Header = () => (
   <header class="mdl-layout__header">
@@ -6,12 +6,12 @@ const Header = () => (
       <span class="mdl-layout-title">Cypress Demo</span>
       <div class="mdl-layout-spacer" />
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="/Input">
+        <Link class="mdl-navigation__link" to="/input">
           Input
-        </a>
-        <a class="mdl-navigation__link" href="/Output">
+        </Link>
+        <Link class="mdl-navigation__link" to="/output">
           Output
-        </a>
+        </Link>
       </nav>
     </div>
   </header>

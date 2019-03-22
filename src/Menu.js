@@ -1,13 +1,15 @@
+import { Link } from "inferno-router";
+
 const Menu = () => (
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Title</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="/Input">
+      <Link class="mdl-navigation__link" to="/input">
         Input
-      </a>
-      <a class="mdl-navigation__link" href="/Output">
+      </Link>
+      <Link class="mdl-navigation__link" to="/output">
         Output
-      </a>
+      </Link>
     </nav>
   </div>
 );
