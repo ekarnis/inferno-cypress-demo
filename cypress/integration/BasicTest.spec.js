@@ -1,4 +1,10 @@
-import { INPUT_SELECTORS, OUTPUT_SELECTORS } from "../constants/Selectors";
+import {
+  INPUT_SELECTORS,
+  OUTPUT_SELECTORS,
+  HAMBURGER_BUTTON,
+  OUTPUT_BUTTON,
+  BLURRED_OUT_AREA
+} from "../constants/Selectors";
 import { INPUT_VALUES, OUTPUT_VALUES } from "./BasicTest.data.js";
 
 describe("Test the app with a variety of values", function() {
@@ -10,9 +16,9 @@ describe("Test the app with a variety of values", function() {
         .type(INPUT_VALUES.low[index]);
     });
 
-    cy.get(".material-icons").click();
-    cy.get(".mdl-layout__drawer > .mdl-navigation > [href='/output']").click();
-    cy.get(".mdl-layout__obfuscator").click();
+    cy.get(HAMBURGER_BUTTON).click();
+    cy.get(OUTPUT_BUTTON).click();
+    cy.get(BLURRED_OUT_AREA).click();
 
     OUTPUT_SELECTORS.map((selector, index) => {
       cy.get(selector).contains(OUTPUT_VALUES.low[index]);
@@ -26,9 +32,9 @@ describe("Test the app with a variety of values", function() {
         .type(INPUT_VALUES.middle[index]);
     });
 
-    cy.get(".material-icons").click();
-    cy.get(".mdl-layout__drawer > .mdl-navigation > [href='/output']").click();
-    cy.get(".mdl-layout__obfuscator").click();
+    cy.get(HAMBURGER_BUTTON).click();
+    cy.get(OUTPUT_BUTTON).click();
+    cy.get(BLURRED_OUT_AREA).click();
 
     OUTPUT_SELECTORS.map((selector, index) => {
       cy.get(selector).contains(OUTPUT_VALUES.middle[index]);
@@ -42,9 +48,9 @@ describe("Test the app with a variety of values", function() {
         .type(INPUT_VALUES.high[index]);
     });
 
-    cy.get(".material-icons").click();
-    cy.get(".mdl-layout__drawer > .mdl-navigation > [href='/output']").click();
-    cy.get(".mdl-layout__obfuscator").click();
+    cy.get(HAMBURGER_BUTTON).click();
+    cy.get(OUTPUT_BUTTON).click();
+    cy.get(BLURRED_OUT_AREA).click();
 
     OUTPUT_SELECTORS.map((selector, index) => {
       cy.get(selector).contains(OUTPUT_VALUES.high[index]);

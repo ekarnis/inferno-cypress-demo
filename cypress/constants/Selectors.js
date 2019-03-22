@@ -22,3 +22,8 @@ export const OUTPUT_SELECTORS = [
   "#output8",
   "#output9"
 ];
+
+export const HAMBURGER_BUTTON = ".material-icons";
+export const OUTPUT_BUTTON =
+  ".mdl-layout__drawer > .mdl-navigation > [href='/output']";
+export const BLURRED_OUT_AREA = ".mdl-layout__obfuscator";
